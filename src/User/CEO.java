@@ -2,9 +2,9 @@ package User;
 
 import java.util.ArrayList;
 
-public class CEO extends User{
+public class CEO extends User {
 	private static ArrayList<Manager> listManager;
-	
+
 	public static ArrayList<Manager> getListManager() {
 		return listManager;
 	}
@@ -13,7 +13,11 @@ public class CEO extends User{
 		CEO.listManager = listManager;
 	}
 
-	public CEO(String uN, String pW, String fN) {
-		super(uN, pW, fN);
+	public CEO(String userName, String passWord, String fullName, String userRule, Integer id) {
+		CEO.fullName = fullName;
+		CEO.userName = userName;
+		CEO.passWord = passWord;
+		CEO.userRule = userRule;
+		CEO.idUser   = id;
 	}
 }

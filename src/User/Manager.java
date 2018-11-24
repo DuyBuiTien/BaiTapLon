@@ -2,31 +2,24 @@ package User;
 
 import java.util.ArrayList;
 
-public class Manager extends User{
+public class Manager extends User {
 	
-	private static ArrayList<Employee> listEmployee;
-	private static int idManager;
+	private static ArrayList<Employee> employeeList;
 
-	public Manager(String uN, String pW, String fN, int id) {
-		super(uN, pW, fN);
-		Manager.idManager = id;
-	}
-	
-	public static ArrayList<Employee> getListEmployee() {
-		return listEmployee;
+	public Manager(String userName, String passWord, String fullName, String userRule, Integer id) {
+		Manager.fullName = fullName;
+		Manager.userName = userName;
+		Manager.passWord = passWord;
+		Manager.userRule = userRule;
+		Manager.idUser   = id;
 	}
 
-
-	public static void setListEmployee(ArrayList<Employee> listEmployee) {
-		Manager.listEmployee = listEmployee;
+	public static ArrayList<Employee> getEmployeeList() {
+		return employeeList;
 	}
 
-	public static int getIdManager() {
-		return idManager;
+	public static void setEmployeeList(ArrayList<Employee> employeeList) {
+		Manager.employeeList = employeeList;
 	}
 
-	public static void setIdManager(int idManager) {
-		Manager.idManager = idManager;
-	}
-	
 }

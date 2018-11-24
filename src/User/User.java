@@ -1,33 +1,43 @@
 package User;
 
 public abstract class User {
-	private static String userName;
-	private static String passWord;
-	private static String fullName;
-	
+	protected static Integer idUser;
+	protected static String userName;
+	protected static String passWord;
+	protected static String fullName;
+	protected static String userRule;
+
 	public User() {
+		User.idUser   = null;
 		User.userName = null;
 		User.passWord = null;
 		User.fullName = null;
+		User.userRule = null;
 	}
-	
-	public User(String uN, String pW, String fN) {
-		User.userName = uN;
-		User.passWord = pW;
-		User.fullName = fN;
+
+	public User(String userName, String passWord, String fullName, String userRule, Integer id) {
+		User.userName = userName;
+		User.passWord = passWord;
+		User.fullName = fullName;
+		User.userRule = userRule;
+		User.idUser   = id;
 	}
-	
-	//Setters and Getters
-	public static String getUserName() {
+
+	// Setters and Getters
+	public String getUserName() {
 		return userName;
 	}
-	public static String getPassWord() {
+
+	public String getPassWord() {
 		return passWord;
 	}
-	public static String getFullName() {
+
+	public String getFullName() {
 		return fullName;
 	}
 
-	
-	
+	public static String getUserRule() {
+		return userRule;
+	}
+
 }
